@@ -48,6 +48,13 @@ Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)
 ##Analytical Backend
 
 ####finalwrapper.php
-The outermost element of our data gathering task (the process by which we actually make API calls and store the   resulting information) is this wrapper, a PHP script that launches our main script based on the remaining match IDs in the JSON source and limits itself to the time constraints of the dev API key. The code that this wrapper calls, which will be explained below, dynamically removes values from the JSON of match IDs to improve the efficiency of this process.
+The outermost element of our data gathering task (the process by which we actually make API calls and store the   resulting information) is this wrapper, a PHP script that launches our main script based on the remaining match IDs in the JSON source and limits itself to the time constraints of the dev API key. The code that this wrapper calls, which will be explained below, dynamically removes values from the JSON of match IDs to improve the efficiency of this process. This code also tells the main file whether or not the sourced match ID is a Bilgewater game.
   
-##
+####getData.php
+This is the core script of our system in terms of gathering data from the API. It begins by grabbing the JSON result of a single match ID call, which is then taken linearly through a series of steps to store the data we need. The Baron data is gathered first, followed in order by champion data, item data, and brawler data (if applicable). This data is passed to our SQL database.
+
+##Frontend
+
+####HTML5up
+There's no hiding the fact that we are not developers or programmers with a history in frontend web, so we opted for a sleek template provided by HTML5up in order to display our content in a way that was clear, concise, and polished, but without sacrificing too much time that could be spent on the backend.
+HTML5up can be found here: http://html5up.net/
