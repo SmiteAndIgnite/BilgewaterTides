@@ -15,7 +15,7 @@ Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)
   Storing the data obtained via the API allowed us to split work and processing time
   without losing data. As a result, we spent the first week of the competition period 
   setting up scripts to gather the data that we deemed important and store it here. 
-  The database is organized for Black Market games as follows and dublidated (with the exception of brawler data)
+  The database is organized for Black Market games as follows and dublicated (with the exception of brawler data)
   for normal game type analysis: <br>
   * Baron Data Table
     * Time of first Baron slain
@@ -44,3 +44,10 @@ Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)
     * Number of Ocklepods
     * Number of wins with combination
     * Number of games with combination
+
+##Analytical Backend
+
+####finalwrapper.php
+The outermost element of our data gathering task (the process by which we actually make API calls and store the   resulting information) is this wrapper, a PHP script that launches our main script based on the remaining match IDs in the JSON source and limits itself to the time constraints of the dev API key. The code that this wrapper calls, which will be explained below, dynamically removes values from the JSON of match IDs to improve the efficiency of this process.
+  
+##
