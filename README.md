@@ -9,4 +9,38 @@ Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)
   PHP for the backend analytics <br>
   Javascript/HTML frontend - Landed template by HTML5up! <br>
   
-##
+##Database
+
+  Our SQL database is the core link between analysis and presentation.
+  Storing the data obtained via the API allowed us to split work and processing time
+  without losing data. As a result, we spent the first week of the competition period 
+  setting up scripts to gather the data that we deemed important and store it here. 
+  The database is organized for Black Market games as follows and dublidated (with the exception of brawler data)
+  for normal game type analysis: <br>
+  * Baron Data Table
+    * Time of first Baron slain
+    * Team that got first Baron
+    * Time of last Baron slain
+    * Team that got last Baron
+    * Game duration (end of match timestamp)
+    * Winning team
+  
+  * Champions Data Table
+    * Champion ID
+    * Games won
+    * Games played
+
+  * Items Data Table
+    * Champion ID
+    * Final Item Combination
+    * Wins with said combination
+    * Games played with said combination
+    
+  * Brawlers Data Table (Each row represents a different combination of brawlers)
+    * Combination ID
+    * Number of Razorfins
+    * Number of Ironbacks
+    * Number of Plundercrabs
+    * Number of Ocklepods
+    * Number of wins with combination
+    * Number of games with combination
