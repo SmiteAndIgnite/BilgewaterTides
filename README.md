@@ -1,7 +1,9 @@
 # BilgewaterTides
 
 Repo for submission of project in the Riot API Challenge 2.0 <br>
-Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)
+Entrants: Roberto Miguel (Rawbearto), Aaron Kemmer (RustledBadKid)<br><br>
+
+Submission live at: <br>winionwaves.a-a-ron.me/challenge/index.php
 ##
 --------------------
 ### Our Stack
