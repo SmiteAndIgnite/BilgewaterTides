@@ -54,6 +54,9 @@ The outermost element of our data gathering task (the process by which we actual
 This is the core script of our system in terms of gathering data from the API. It begins by grabbing the JSON result of a single match ID call, which is then taken linearly through a series of steps to store the data we need. The Baron data is gathered first, followed in order by champion data, item data, and brawler data (if applicable). This data is passed to our SQL database.
 
 ##Frontend
+####Modules
+The landing page is split into sections based on the pieces of the data relevant to those specific statistics, much like the organization of the database tables. The headers for each section give a "TL;DR" of the data we looked for
+in that section. For example, in the Champions section, the landing page displays the most popular champion (by pick rate) and what we've dubbed the "most successful" champion, or the champion with the highest win rate while still maintaining a somewhat reasonable pick rate. As such, a champion, item, or brawler combination with a very low play rate relative to its fellows (i.e. a champion found in only 250 of 10,000 analyzed games) is not considered for the spot of "best" or "most successful." Each section features a link to the raw data, generally sorted by pick/play rate from most popular to least popular. 
 
 ####HTML5up
 There's no hiding the fact that we are not developers or programmers with a history in frontend web, so we opted for a sleek template provided by HTML5up in order to display our content in a way that was clear, concise, and polished, but without sacrificing too much time that could be spent on the backend.
